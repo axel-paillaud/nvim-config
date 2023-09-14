@@ -26,6 +26,7 @@ require("lazy").setup({
     "nvim-orgmode/orgmode",
     "ellisonleao/gruvbox.nvim", priority = 1000,
     "nvim-tree/nvim-tree.lua",
+    "nvim-tree/nvim-web-devicons",
 })
 
 vim.o.background = "light"
