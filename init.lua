@@ -1,3 +1,6 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.cmd('set number')
 vim.cmd('set expandtab')
 vim.cmd('set shiftwidth=4')
@@ -21,7 +24,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",	
     "nvim-orgmode/orgmode",
-    "ellisonleao/gruvbox.nvim", priority = 1000
+    "ellisonleao/gruvbox.nvim", priority = 1000,
+    "nvim-tree/nvim-tree.lua",
 })
 
 vim.o.background = "light"
@@ -34,6 +38,14 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+-- nvim-tree
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup()
+
+-- Org-mode
 -- Load custom treesitter grammar for org filetype
 require('orgmode').setup_ts_grammar()
 
