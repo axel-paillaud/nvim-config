@@ -22,7 +22,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    "nvim-treesitter/nvim-treesitter",	
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},	
     "nvim-orgmode/orgmode",
     "ellisonleao/gruvbox.nvim", priority = 1000,
     "nvim-tree/nvim-tree.lua",
@@ -35,7 +35,9 @@ vim.o.background = "light"
 vim.cmd([[colorscheme gruvbox]])
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {'org'},
+  ensure_installed = {
+      'org', 'javascript', 'vim', 'vimdoc', 'html', 'php', 'vue', 'c', 'lua',
+  },
   highlight = {
     enable = true,
     -- Required for spellcheck, some LaTex highlights and
