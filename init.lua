@@ -27,6 +27,8 @@ require("lazy").setup({
     "ellisonleao/gruvbox.nvim", priority = 1000,
     "nvim-tree/nvim-tree.lua",
     "nvim-tree/nvim-web-devicons",
+    "nvim-lua/plenary.nvim",
+    {"nvim-telescope/telescope.nvim", tag = "0.1.3"},
 })
 
 vim.o.background = "light"
@@ -39,12 +41,22 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+-- Keymap for Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
 -- nvim-tree
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
 require("nvim-tree").setup()
+
+-- Keymap for nvim-tree
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
 
 -- Org-mode
 -- Load custom treesitter grammar for org filetype
@@ -64,6 +76,6 @@ require('nvim-treesitter.configs').setup {
 }
 
 require('orgmode').setup({
-  org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
-  org_default_notes_file = '~/Dropbox/org/refile.org',
+  org_agenda_files = {'~/Sync/org/*', '~/my-orgs/**/*'},
+  org_default_notes_file = '~/Sync/org/refile.org',
 })
