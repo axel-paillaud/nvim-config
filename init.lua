@@ -35,7 +35,7 @@ vim.o.background = "light"
 vim.cmd([[colorscheme gruvbox]])
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "javascript", -- Assurez-vous que le langage est installé
+  ensure_installed = "javascript", -- S'assurer que le langage est installé
   highlight = {
     enable = true,              -- Activer la coloration syntaxique
   },
