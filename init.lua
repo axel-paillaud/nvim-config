@@ -1,3 +1,5 @@
+require("axel");
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -63,9 +65,6 @@ vim.opt.termguicolors = true
 
 -- empty setup using defaults
 require("nvim-tree").setup()
-
--- Keymap for nvim-tree
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
 
 -- Org-mode
 -- Load custom treesitter grammar for org filetype
