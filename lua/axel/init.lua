@@ -1,3 +1,3 @@
-require("axel.remap")
 require("axel.set")
+require("axel.remap")
 
