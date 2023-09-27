@@ -20,21 +20,12 @@ require("lazy").setup({
     "nvim-lua/plenary.nvim",
     {"nvim-telescope/telescope.nvim", tag = "0.1.3"},
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-    -- LSP support
-    {
-        'neovim/nvim-lspconfig',
-        dependencies = {
-            {'hrsh7th/cmp-nvim-lsp'},
-        },
-    },
-
-    -- Autocompletion
-    {
-        'hrsh7th/nvim-cmp',
-        dependencies = {
-            {'L3MON4D3/LuaSnip'},
-        }
-    }
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
+    {'L3MON4D3/LuaSnip'},
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
 })
 
 vim.o.background = "light"
