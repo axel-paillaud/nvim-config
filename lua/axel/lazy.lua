@@ -27,6 +27,7 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "numToStr/Comment.nvim",
+    "mfussenegger/nvim-dap",
 })
 
 vim.o.background = "light"
