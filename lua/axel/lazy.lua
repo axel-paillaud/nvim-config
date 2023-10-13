@@ -31,6 +31,7 @@ require("lazy").setup({
     "mxsdev/nvim-dap-vscode-js",
 })
 
+-- Theme gruvbox
 vim.o.background = "light"
 vim.cmd([[colorscheme gruvbox]])
 
