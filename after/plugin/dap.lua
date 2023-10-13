@@ -1,0 +1,4 @@
+-- JavaScript DAP configuration
+-- require("mxsdev/nvim-dap-vscode-js").setup {
+--
+-- }
