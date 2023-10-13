@@ -29,6 +29,7 @@ require("lazy").setup({
     "numToStr/Comment.nvim",
     "mfussenegger/nvim-dap",
     "mxsdev/nvim-dap-vscode-js",
+    {"microsoft/vscode-js-debug", opt = true, run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"},
 })
 
 -- Theme gruvbox
