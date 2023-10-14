@@ -44,3 +44,4 @@ for _, language in ipairs({ "typescript", "javascript" }) do
         },
     }
 end
+

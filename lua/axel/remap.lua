@@ -13,3 +13,5 @@ vim.keymap.set('n', '<leader>b', require 'dap'.toggle_breakpoint)
 vim.keymap.set('n', '<leader>B', function()
     require 'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))
 end)
+-- View the value for the expression under the cursor in a floating window :
+vim.keymap.set('n', '<leader>v', require 'dap.ui.widgets'.hover)
