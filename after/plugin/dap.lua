@@ -9,13 +9,17 @@ require("dap-vscode-js").setup({
   -- log_console_level = vim.log.levels.ERROR -- Logging level for output to console. Set to false to disable console output.
 })
 
+-- require("dap").adapters["pwa-node"] = {
+--     type = "server",
+--     host = "localhost",
+--     port = "${port}",
+--     executable = {
+--         command = "node",
+--     }
+-- }
+
 require("dap").adapters["pwa-node"] = {
-    type = "server",
-    host = "localhost",
-    port = "${port}",
-    executable = {
-        command = "node",
-    }
+    type = "executable", 
 }
 
 for _, language in ipairs({ "typescript", "javascript" }) do
