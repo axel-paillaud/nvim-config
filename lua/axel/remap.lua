@@ -2,7 +2,7 @@
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<CR>')
 
--- Keymap to control DAP
+-- Keymap to control DAP. See :help dap-mappings for more idea
 local dap = require("dap")
 
 vim.keymap.set('n', '<F5>', require 'dap'.continue)
