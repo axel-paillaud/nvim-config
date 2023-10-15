@@ -32,23 +32,3 @@ require("lazy").setup({
     {"microsoft/vscode-js-debug", build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"},
 })
 
--- Theme gruvbox
-vim.o.background = "light"
-vim.cmd([[colorscheme gruvbox]])
-
--- nvim-tree
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
-
--- empty setup using defaults
-require("nvim-tree").setup()
-
--- Org-mode
--- Load custom treesitter grammar for org filetype
-require('orgmode').setup_ts_grammar()
-
-require('orgmode').setup({
-  org_agenda_files = {'~/Sync/org/*', '~/my-orgs/**/*'},
-  org_default_notes_file = '~/Sync/org/refile.org',
-})
-
