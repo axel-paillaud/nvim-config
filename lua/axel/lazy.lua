@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},	
     "nvim-orgmode/orgmode",
-    "ellisonleao/gruvbox.nvim", priority = 1000,
+    {"ellisonleao/gruvbox.nvim", priority = 1000, config = true},
     "nvim-tree/nvim-tree.lua",
     "nvim-tree/nvim-web-devicons",
     "nvim-lua/plenary.nvim",
