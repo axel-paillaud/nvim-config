@@ -30,11 +30,5 @@ require("lazy").setup({
     "mfussenegger/nvim-dap",
     "mxsdev/nvim-dap-vscode-js",
     {"microsoft/vscode-js-debug", build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"},
-    {
-        'uloco/bluloco.nvim',
-        lazy = false,
-        priority = 1000,
-        dependencies = { 'rktjmp/lush.nvim' },
-    },
 })
 
