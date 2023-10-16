@@ -33,7 +33,7 @@ require("dap-vscode-js").setup({
 --     }
 -- }
 
-for _, language in ipairs({ "typescript", "javascript" }) do
+for _, language in ipairs({ "typescript", "javascript", "vue" }) do
     require("dap").configurations[language] = {
         {
             type = "pwa-node",
@@ -53,7 +53,7 @@ for _, language in ipairs({ "typescript", "javascript" }) do
             type = "pwa-chrome",
             request = "launch",
             name = "Start Chrome with \"localhost\"",
-            url = "http://localhost:3000",
+            url = "http://localhost:8000",
             webRoot = "${workspaceFolder}",
             userDataDir = "${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir"
         },
