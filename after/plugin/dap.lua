@@ -1,4 +1,4 @@
-vim.fn.sign_define('DapBreakpoint', {text='🔴', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapBreakpoint', {text='', texthl='', linehl='', numhl=''})
 
 -- Microsoft JavaScript Debugger setup
 require("dap-vscode-js").setup({
