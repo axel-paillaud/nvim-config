@@ -18,6 +18,9 @@ vim.keymap.set('n', '<Leader>lp', function() require('dap').set_breakpoint(nil, 
 vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end)
 vim.keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
 
+-- Stop the current debug session
+vim.keymap.set('n', '<Leader>dc', function() require('dap').close() end)
+
 -- View the value for the expression under the cursor in a floating window :
 vim.keymap.set({'n', 'v'}, '<leader>dh', require 'dap.ui.widgets'.hover)
 
