@@ -52,7 +52,7 @@ for _, language in ipairs({ "typescript", "javascript", "vue" }) do
         {
             type = "pwa-chrome",
             request = "launch",
-            name = "Start Chrome with \"localhost\"",
+            name = "Start Chrome with \"localhost\" on port 8000",
             url = "http://localhost:8000",
             webRoot = "${workspaceFolder}",
             userDataDir = "${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir"
