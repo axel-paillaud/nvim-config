@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},	
     "nvim-orgmode/orgmode",
-    "ellisonleao/gruvbox.nvim", priority = 1000,
+    {"ellisonleao/gruvbox.nvim", priority = 1000, config = true, lazy = false},
     "nvim-tree/nvim-tree.lua",
     "nvim-tree/nvim-web-devicons",
     "nvim-lua/plenary.nvim",
@@ -27,41 +27,8 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "numToStr/Comment.nvim",
-})
-
-vim.o.background = "light"
-vim.cmd([[colorscheme gruvbox]])
-
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = {
-        'org', 'javascript', 'vim', 'vimdoc', 'html', 'php', 'vue', 'c', 'lua',
-        'hlsl', 'json', 'latex', 'http', 'css', 'scss', 'typescript', 'vala',
-        'xml',
-    },
-  highlight = {
-    enable = true,
-    -- Required for spellcheck, some LaTex highlights and
-    -- code block highlights that do not have ts grammar
-    additional_vim_regex_highlighting = {'org'},
-  },
-  indent = {
-    enable = true,
-  },
-}
-
--- nvim-tree
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
-
--- empty setup using defaults
-require("nvim-tree").setup()
-
--- Org-mode
--- Load custom treesitter grammar for org filetype
-require('orgmode').setup_ts_grammar()
-
-require('orgmode').setup({
-  org_agenda_files = {'~/Sync/org/*', '~/my-orgs/**/*'},
-  org_default_notes_file = '~/Sync/org/refile.org',
+    "mfussenegger/nvim-dap",
+    "mxsdev/nvim-dap-vscode-js",
+    {"microsoft/vscode-js-debug", build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"},
 })
 
