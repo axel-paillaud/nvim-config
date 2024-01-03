@@ -9,6 +9,7 @@ require("gruvbox").setup({
 })
 
 -- "light" for clear theme
+-- "dark" for dark theme
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
 
