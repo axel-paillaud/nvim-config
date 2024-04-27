@@ -28,7 +28,7 @@ require("lazy").setup({
     "williamboman/mason-lspconfig.nvim",
     "numToStr/Comment.nvim",
     "mfussenegger/nvim-dap",
-    --"mxsdev/nvim-dap-vscode-js",
+    "mxsdev/nvim-dap-vscode-js",
     --{"microsoft/vscode-js-debug", build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"},
 })
 
