@@ -1,20 +1,6 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup({
+return {
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},	
     "nvim-orgmode/orgmode",
-    {"ellisonleao/gruvbox.nvim", priority = 1000, config = true, lazy = false},
     "nvim-tree/nvim-tree.lua",
     "nvim-tree/nvim-web-devicons",
     "nvim-lua/plenary.nvim",
@@ -30,5 +16,4 @@ require("lazy").setup({
     "mfussenegger/nvim-dap",
     "mxsdev/nvim-dap-vscode-js",
     --{"microsoft/vscode-js-debug", build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"},
-})
-
+}
