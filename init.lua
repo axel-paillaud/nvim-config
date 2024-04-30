@@ -17,7 +17,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
--- Nvim Tree
-require("nvim-tree").setup()
-
 require("remap");
