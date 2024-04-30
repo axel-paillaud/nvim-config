@@ -1,9 +1,8 @@
-return {
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},	
-    "nvim-orgmode/orgmode",
-    "nvim-tree/nvim-tree.lua",
+return {    
     "nvim-tree/nvim-web-devicons",
     "nvim-lua/plenary.nvim",
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},	
+    "nvim-orgmode/orgmode",
     {"nvim-telescope/telescope.nvim", tag = "0.1.3"},
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
     {'neovim/nvim-lspconfig'},
