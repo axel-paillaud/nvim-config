@@ -9,7 +9,6 @@ return {
     {'L3MON4D3/LuaSnip'},
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "numToStr/Comment.nvim",
     "mfussenegger/nvim-dap",
     "mxsdev/nvim-dap-vscode-js",
     --{"microsoft/vscode-js-debug", build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"},
