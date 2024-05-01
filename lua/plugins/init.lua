@@ -1,5 +1,4 @@
 return {    
-    "nvim-orgmode/orgmode",
     {"nvim-telescope/telescope.nvim", tag = "0.1.3"},
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
     {'neovim/nvim-lspconfig'},
