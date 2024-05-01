@@ -1,5 +1,5 @@
 return {    
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},	
+    -- {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},	
     "nvim-orgmode/orgmode",
     {"nvim-telescope/telescope.nvim", tag = "0.1.3"},
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
