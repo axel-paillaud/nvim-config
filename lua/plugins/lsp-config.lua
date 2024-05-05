@@ -16,4 +16,22 @@ return {
             })
         end
     },
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            local lspconfig = require("lspconfig")
+            lspconfig.lua_ls.setup({})
+            lspconfig.tsserver.setup({})
+            lspconfig.volar.setup({
+                init_options = {
+                    typescript = {
+                        tsdk = '/usr/lib/node_modules/typescript/lib'
+                    }
+                }
+            })
+            lspconfig.cssls.setup({})
+            lspconfig.html.setup({})
+            lspconfig.intelephense.setup({})
+        end
+    },
 }
