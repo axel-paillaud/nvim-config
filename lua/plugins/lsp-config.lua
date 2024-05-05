@@ -17,8 +17,17 @@ return {
         end
     },
     {
+        'VonHeikemen/lsp-zero.nvim', branch = 'v3.x',
+    },
+    {
         "neovim/nvim-lspconfig",
         config = function()
+            local lsp_zero = require('lsp-zero')
+            lsp_zero.on_attach(function(client, bufnr)
+                -- see :help lsp-zero-keybindings
+                -- to learn the available actions
+                lsp_zero.default_keymaps({buffer = bufnr})
+            end)
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({})
             lspconfig.tsserver.setup({})
