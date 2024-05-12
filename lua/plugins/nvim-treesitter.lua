@@ -3,6 +3,8 @@ return {
     config = function ()
         local configs = require("nvim-treesitter.configs")
 
+        require('orgmode').setup_ts_grammar()
+
         configs.setup({
             ensure_installed = { 
                 "c", "lua", "vim", "vimdoc", "query", "org", "javascript", "html", "php", 
