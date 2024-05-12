@@ -22,37 +22,21 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lsp_zero = require('lsp-zero')
-            lsp_zero.on_attach(function(client, bufnr)
-                -- see :help lsp-zero-keybindings
-                -- to learn the available actions
-                lsp_zero.default_keymaps({buffer = bufnr})
-            end)
 
-            local vue_typescript_plugin = require('mason-registry')
-                .get_package('vue-language-server')
-                :get_install_path()
-            .. '/node_modules/@vue/language-server'
-            .. '/node_modules/@vue/typescript-plugin'
+            -- Get typescript lsp installation path for Volar, from Mason install path
+            -- Provide it to volar.setup
+            local typescript_language_server = require('mason-registry')
+            .get_package('typescript-language-server')
+            :get_install_path()
+            .. '/node_modules/typescript/lib'
 
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({})
-            lspconfig.tsserver.setup({
---[[                 init_options = {
-                    plugins = {
-                        {
-                            name = "@vue/typescript-plugin",
-                            location = vue_typescript_plugin,
-                            languages = {'javascript', 'typescript', 'vue'}
-                        },
-                    },
-                } ]]
-            })
+            lspconfig.tsserver.setup({})
             lspconfig.volar.setup({
                 init_options = {
                     typescript = {
-                        -- tsdk = '/usr/lib/node_modules/typescript/lib'
-                        tsdk = '/home/axel/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib'
+                        tsdk = typescript_language_server
                     }
                 }
             })
