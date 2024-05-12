@@ -12,7 +12,6 @@ return {
                 ensure_installed = {
                     'tsserver', 'volar', 'cssls', 'html', 'intelephense', 'lua_ls'
                 },
-                -- add handlers after lsp-zero here
             })
         end
     },
