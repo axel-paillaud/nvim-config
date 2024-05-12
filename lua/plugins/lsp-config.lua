@@ -39,6 +39,15 @@ return {
             lspconfig.cssls.setup({})
             lspconfig.html.setup({})
             lspconfig.intelephense.setup({})
+
+            -- Keymap
+            vim.api.nvim_create_autocmd('LspAttach', {
+                callback = function(args)
+                    vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
+                    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = args.buf })
+                    vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
+                end,
+            })
         end
     },
 }
