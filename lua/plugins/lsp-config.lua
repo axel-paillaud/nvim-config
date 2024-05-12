@@ -19,6 +19,8 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
 
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
             -- Get typescript lsp installation path for Volar, from Mason install path
             -- Provide it to volar.setup
             local typescript_language_server = require('mason-registry')
@@ -27,18 +29,35 @@ return {
             .. '/node_modules/typescript/lib'
 
             local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({})
-            lspconfig.tsserver.setup({})
+
+            lspconfig.lua_ls.setup({
+                capabilities = capabilities,
+            })
+
+            lspconfig.tsserver.setup({
+                capabilities = capabilities,
+            })
+
             lspconfig.volar.setup({
+                capabilities = capabilities,
                 init_options = {
                     typescript = {
                         tsdk = typescript_language_server
                     }
                 }
             })
-            lspconfig.cssls.setup({})
-            lspconfig.html.setup({})
-            lspconfig.intelephense.setup({})
+
+            lspconfig.cssls.setup({
+                capabilities = capabilities,
+            })
+
+            lspconfig.html.setup({
+                capabilities = capabilities,
+            })
+
+            lspconfig.intelephense.setup({
+                capabilities = capabilities,
+            })
 
             -- Keymap
             vim.api.nvim_create_autocmd('LspAttach', {
