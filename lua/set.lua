@@ -20,6 +20,8 @@ vim.opt.scrolloff = 8
 -- See if this one is very useful. If not, remove it
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80" 
+vim.opt.colorcolumn = "80"
+
+vim.opt.signcolumn = 'yes'
 
 vim.g.mapleader = " "
