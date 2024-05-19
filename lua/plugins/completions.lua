@@ -1,13 +1,6 @@
 return {
     {
         "hrsh7th/cmp-nvim-lsp",
-        config = function ()
-            require'cmp'.setup {
-                sources = {
-                    { name = 'nvim_lsp' }
-                }
-            }
-        end
     },
     {
         "L3MON4D3/LuaSnip",
@@ -42,6 +35,7 @@ return {
                 }),
                 sources = cmp.config.sources({
                     { name = 'luasnip' }, -- For luasnip users.
+                    { name = 'nvim_lsp' },
                 }, {
                         { name = 'buffer' },
                     })
