@@ -15,6 +15,10 @@ return {
             local cmp = require'cmp'
             require("luasnip.loaders.from_vscode").lazy_load()
 
+            -- Extend snippet to framework
+            require('luasnip').filetype_extend("vue", {"html", "css"})
+            require('luasnip').filetype_extend("blade", {"html",})
+
             cmp.setup({
                 snippet = {
                     -- REQUIRED - you must specify a snippet engine
