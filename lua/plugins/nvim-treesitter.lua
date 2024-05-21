@@ -47,14 +47,6 @@ return {
             autocmd BufNewFile,BufRead *.blade.php set ft=blade
             augroup END
             ]]
-
-        -- Configuration pour l'indentation à 2 espaces pour les fichiers Blade
-        vim.cmd [[
-            augroup BladeIndentation
-            autocmd!
-            autocmd FileType blade setlocal tabstop=2 shiftwidth=2 expandtab
-            augroup END
-            ]]
     end
 }
 
