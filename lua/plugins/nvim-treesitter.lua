@@ -3,10 +3,22 @@ return {
     config = function ()
         local configs = require("nvim-treesitter.configs")
 
+        -- blade syntaxe highlight
+        local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+        parser_config.blade = {
+            install_info = {
+                url = "https://github.com/EmranMR/tree-sitter-blade",
+                files = {"src/parser.c"},
+                branch = "main",
+            },
+            filetype = "blade"
+        }
+
         configs.setup({
             ensure_installed = {
                 "c", "lua", "vim", "vimdoc", "query", "org", "javascript", "html", "php",
                 "hlsl", "json", "http", "css", "scss", "typescript", "vala", "xml", "vue",
+                "blade",
             },
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -27,6 +39,14 @@ return {
                 enable = true,
             },
         })
+
+        -- Configuration Vimscript pour définir le type de fichier Blade pour les fichiers *.blade.php
+        vim.cmd [[
+            augroup BladeFiletypeRelated
+            autocmd!
+            autocmd BufNewFile,BufRead *.blade.php set ft=blade
+            augroup END
+            ]]
     end
 }
 
