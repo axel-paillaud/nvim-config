@@ -14,11 +14,20 @@ return {
             filetype = "blade"
         }
 
+        parser_config.smarty = {
+            install_info = {
+                -- url = "https://github.com/Kibadda/tree-sitter-smarty",
+                url = "https://github.com/tree-sitter/tree-sitter-html",
+                files = { "src/parser.c" },
+                branch = "main",
+            },
+        }
+
         configs.setup({
             ensure_installed = {
                 "c", "lua", "vim", "vimdoc", "query", "org", "javascript", "html", "php",
                 "hlsl", "json", "http", "css", "scss", "typescript", "vala", "xml", "vue",
-                "blade",
+                "blade", "smarty",
             },
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
