@@ -53,7 +53,7 @@ return {
 
             lspconfig.html.setup({
                 capabilities = capabilities,
-                filetypes = { "html" },
+                filetypes = { "html", "smarty" },
             })
 
             lspconfig.intelephense.setup({
