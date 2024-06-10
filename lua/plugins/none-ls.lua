@@ -7,12 +7,8 @@ return {
             debug = true,
             sources = {
                 null_ls.builtins.formatting.stylua,
-                null_ls.builtins.diagnostics.markuplint.with({
-                    filetypes = { "smarty", "html", },
-                }),
-                null_ls.builtins.formatting.prettier.with({
-                    filetypes = { "smarty" },
-                }),
+                null_ls.builtins.diagnostics.markuplint,
+                null_ls.builtins.formatting.prettier,
             },
         })
 
