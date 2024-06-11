@@ -13,11 +13,25 @@ return {
         "hrsh7th/nvim-cmp",
         config = function()
             local cmp = require'cmp'
+            local luasnip = require('luasnip')
             require("luasnip.loaders.from_vscode").lazy_load()
 
             -- Extend snippet to framework
             require('luasnip').filetype_extend("vue", {"html", "css"})
             require('luasnip').filetype_extend("blade", {"html",})
+
+            -- Jump to the next/prev snippet placeholder
+            vim.keymap.set({'i', 's'}, '<Tab>', function()
+                if luasnip.expand_or_jumpable() then
+                    luasnip.expand_or_jump()
+                end
+            end, {silent = true})
+
+            vim.keymap.set({'i', 's'}, '<S-Tab>', function()
+                if luasnip.jumpable(-1) then
+                    luasnip.jump(-1)
+                end
+            end, {silent = true})
 
             cmp.setup({
                 snippet = {
