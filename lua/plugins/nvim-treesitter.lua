@@ -17,7 +17,7 @@ return {
         configs.setup({
             ensure_installed = {
                 "c", "lua", "vim", "vimdoc", "query", "org", "javascript", "html", "php",
-                "hlsl", "json", "http", "css", "scss", "typescript", "vala", "xml", "vue",
+                "hlsl", "glsl", "json", "http", "css", "scss", "typescript", "vala", "xml", "vue",
                 "blade", "twig",
             },
 
