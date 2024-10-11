@@ -2,6 +2,10 @@
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<CR>')
 
+-- Keymap for prev and next file
+vim.api.nvim_set_keymap('n', '<S-l>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-h>', ':bprev<CR>', { noremap = true, silent = true })
+
 -- Keymap to control DAP. See :help dap-mappings for more idea
 local dap = require("dap")
 
