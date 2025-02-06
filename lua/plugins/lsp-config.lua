@@ -10,7 +10,8 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    'tsserver', 'volar', 'cssls', 'html', 'intelephense', 'lua_ls'
+                    'tsserver', 'volar', 'cssls', 'html', 'intelephense', 'lua_ls',
+                    'phpactor'
                 },
             })
         end
@@ -56,7 +57,7 @@ return {
                 filetypes = { "html", "smarty" },
             })
 
-            lspconfig.intelephense.setup({
+            lspconfig.phpactor.setup({
                 capabilities = capabilities,
             })
 
