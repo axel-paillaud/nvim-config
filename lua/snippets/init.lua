@@ -32,6 +32,18 @@ ls.add_snippets("php", {
     })
 })
 
+ls.add_snippets("css", {
+    s("header-stamp", {
+        t({
+            "/*",
+            " * Author : Axel Paillaud - Axelweb <contact@axelweb.fr>",
+            " * Date : " .. os.date("%Y-%m-%d"),
+            " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - Axelweb",
+            " */"
+        }),
+    })
+})
+
 ls.add_snippets("smarty", {
     s("header-stamp", {
         t({
