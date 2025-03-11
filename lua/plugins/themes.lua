@@ -21,6 +21,6 @@ return {
         -- directly inside the plugin declaration.
         vim.g.gruvbox_material_enable_italic = true
         vim.cmd.colorscheme('gruvbox-material')
-        vim.o.background = 'light'
+        vim.o.background = 'dark'
     end
 }
