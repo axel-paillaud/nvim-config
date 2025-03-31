@@ -32,3 +32,8 @@ vim.opt.relativenumber = true
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- Sync clipboard between OS and Neovim
+vim.schedule(function()
+  vim.opt.clipboard = 'unnamedplus'
+end)
