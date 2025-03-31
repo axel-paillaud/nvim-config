@@ -10,7 +10,7 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    'tsserver', 'volar', 'cssls', 'html', 'intelephense', 'lua_ls',
+                    'ts_ls', 'volar', 'cssls', 'html', 'intelephense', 'lua_ls',
                     'phpactor'
                 },
             })
@@ -35,7 +35,7 @@ return {
                 capabilities = capabilities,
             })
 
-            lspconfig.tsserver.setup({
+            lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
 
