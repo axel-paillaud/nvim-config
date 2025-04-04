@@ -12,9 +12,23 @@ ls.add_snippets("javascript", {
     s("header-stamp", {
         t({
             "/*",
-            " * Author : Axel Paillaud - Axelweb <contact@axelweb.fr>",
-            " * Date : " .. os.date("%Y-%m-%d"),
+            " * Author  : Axel Paillaud - Axelweb",
+            " * Contact : <contact@axelweb.fr>",
+            " * Date    : " .. os.date("%Y-%m-%d"),
             " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - Axelweb",
+            " */"
+        }),
+    })
+})
+
+ls.add_snippets("javascript", {
+    s("header-stamp-prestacraft", {
+        t({
+            "/*",
+            " * Author  : Axel Paillaud - PrestaCraft",
+            " * Contact : <contact@axelweb.fr>",
+            " * Date    : " .. os.date("%Y-%m-%d"),
+            " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - PrestaCraft",
             " */"
         }),
     })
@@ -24,9 +38,23 @@ ls.add_snippets("php", {
     s("header-stamp", {
         t({
             "/*",
-            " * Author : Axel Paillaud - Axelweb <contact@axelweb.fr>",
-            " * Date : " .. os.date("%Y-%m-%d"),
+            " * Author  : Axel Paillaud - Axelweb",
+            " * Contact : <contact@axelweb.fr>",
+            " * Date    : " .. os.date("%Y-%m-%d"),
             " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - Axelweb",
+            " */"
+        }),
+    })
+})
+
+ls.add_snippets("php", {
+    s("header-stamp-prestacraft", {
+        t({
+            "/*",
+            " * Author  : Axel Paillaud - PrestaCraft",
+            " * Contact : <contact@axelweb.fr>",
+            " * Date    : " .. os.date("%Y-%m-%d"),
+            " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - PrestaCraft",
             " */"
         }),
     })
@@ -36,8 +64,35 @@ ls.add_snippets("css", {
     s("header-stamp", {
         t({
             "/*",
-            " * Author : Axel Paillaud - Axelweb <contact@axelweb.fr>",
-            " * Date : " .. os.date("%Y-%m-%d"),
+            " * Author  : Axel Paillaud - Axelweb",
+            " * Contact : <contact@axelweb.fr>",
+            " * Date    : " .. os.date("%Y-%m-%d"),
+            " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - Axelweb",
+            " */"
+        }),
+    })
+})
+
+ls.add_snippets("css", {
+    s("header-stamp-prestacraft", {
+        t({
+            "/*",
+            " * Author  : Axel Paillaud - PrestaCraft",
+            " * Contact : <contact@axelweb.fr>",
+            " * Date    : " .. os.date("%Y-%m-%d"),
+            " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - PrestaCraft",
+            " */"
+        }),
+    })
+})
+
+ls.add_snippets("scss", {
+    s("header-stamp", {
+        t({
+            "/*",
+            " * Author  : Axel Paillaud - Axelweb",
+            " * Contact : <contact@axelweb.fr>",
+            " * Date    : " .. os.date("%Y-%m-%d"),
             " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - Axelweb",
             " */"
         }),
@@ -48,9 +103,23 @@ ls.add_snippets("smarty", {
     s("header-stamp", {
         t({
             "{**",
-            " * Author : Axel Paillaud - Axelweb <contact@axelweb.fr>",
-            " * Date : " .. os.date("%Y-%m-%d"),
+            " * Author  : Axel Paillaud - Axelweb",
+            " * Contact : <contact@axelweb.fr>",
+            " * Date    : " .. os.date("%Y-%m-%d"),
             " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - Axelweb",
+            " *}"
+        }),
+    })
+})
+
+ls.add_snippets("smarty", {
+    s("header-stamp-prestacraft", {
+        t({
+            "{**",
+            " * Author  : Axel Paillaud - PrestaCraft",
+            " * Contact : <contact@axelweb.fr>",
+            " * Date    : " .. os.date("%Y-%m-%d"),
+            " * Copyright since " .. os.date("%Y") .. " Axel Paillaud - PrestaCraft",
             " *}"
         }),
     })
