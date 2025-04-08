@@ -16,7 +16,7 @@ return {
 
         configs.setup({
             ensure_installed = {
-                "c", "lua", "vim", "vimdoc", "query", "org", "javascript", "html", "php",
+                "c", "lua", "vim", "vimdoc", "query", "javascript", "html", "php",
                 "hlsl", "glsl", "json", "http", "css", "scss", "typescript", "vala", "xml", "vue",
                 "blade", "twig",
             },
@@ -30,10 +30,6 @@ return {
 
             highlight = {
                 enable = true,
-
-                -- Required for spellcheck, some LaTex highlights and
-                -- code block highlights that do not have ts grammar
-                additional_vim_regex_highlighting = {"org"},
             },
             indent = {
                 enable = true,
