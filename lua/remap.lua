@@ -6,6 +6,16 @@ vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<CR>')
 vim.api.nvim_set_keymap('n', '<S-l>', ':bnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-h>', ':bprev<CR>', { noremap = true, silent = true })
 
+-- Show diagnostic in popup
+vim.keymap.set('n', '<leader>dd', function()
+  vim.diagnostic.open_float(nil, {
+    focusable = true,
+    border = "rounded",
+    source = "always",
+    prefix = '',
+  })
+end, { desc = "Show diagnostic in popup" })
+
 -- Keymap to control DAP. See :help dap-mappings for more idea
 local dap = require("dap")
 
